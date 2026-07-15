@@ -13,4 +13,8 @@ export class UserService extends BaseService {
   async createUser(payload: any) {
     return await this.api.post('/users', payload);
   }
+
+  async updateUser(id: number, payload: any) {
+    return await this.api.put(`/users/${id}`, payload);
+  }
 }
