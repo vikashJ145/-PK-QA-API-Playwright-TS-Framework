@@ -17,4 +17,8 @@ export class UserService extends BaseService {
   async updateUser(id: number, payload: any) {
     return await this.api.put(`/users/${id}`, payload);
   }
+
+  async deleteUser(id: number) {
+    return await this.api.delete(`/users/${id}`);
+  }
 }
